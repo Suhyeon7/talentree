@@ -1,0 +1,38 @@
+.home-cate {
+  padding: 2rem;
+  background-color: white;
+  height: 100vh; /* 전체 화면 높이 */
+  overflow-y: scroll; /* 스크롤 가능 */
+  margin-bottom: 300px;
+  padding-top: 50px;
+}
+.home-cate::-webkit-scrollbar {
+  display: none;
+}
+
+.cate-section {
+  margin-bottom: 30px;
+}
+
+.cate-section-title {
+  font-size: 15px;
+  background-color: #f8f9fe;
+  height: 50px;
+  display: flex; /* Flexbox 적용 */
+  align-items: center; /* 세로 정렬 */
+  justify-content: flex-start; /* 가로 정렬 - 왼쪽 정렬 */
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.cate-items {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.cate-items li {
+  font-size: 15px;
+  padding: 10px 0;
+  margin: 0.8rem 0;
+  color: #71727a;
+}

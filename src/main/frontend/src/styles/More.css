@@ -1,0 +1,161 @@
+h5 {
+  margin: 10px 0;
+}
+h2,
+section {
+  margin: 0;
+}
+.t-comment {
+  margin: 10px;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  justify-self: center;
+}
+.t-home-tab {
+  width: auto;
+}
+
+.t-header-img {
+  width: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  margin-right: 110px;
+}
+
+.t-head-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #436850;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.t-home-header {
+  width: 353px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1000;
+  padding: 0 1.5rem;
+}
+
+.t-menu-icon {
+  font-size: 1.5rem;
+  color: #436850;
+  margin: 10px;
+}
+.t-search-icon {
+  font-size: 1.5rem;
+  color: #436850;
+  margin: 10px;
+}
+
+.t-list {
+  padding: 75px 2rem 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 500;
+}
+
+.t-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+}
+
+.t-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+}
+
+.t-info {
+  flex-grow: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%; /* 부모 요소의 너비를 초과하지 않도록 설정 */
+  overflow: hidden; /* 부모 요소를 넘치는 내용을 숨김 */
+}
+
+.t-info p {
+  overflow: hidden;
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+  text-overflow: ellipsis; /* 넘치는 텍스트를 "..."로 표시 */
+  max-width: 100%; /* 부모 요소의 너비에 맞춰 조정 */
+  margin: 0;
+}
+
+.t-info h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.t-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #767676;
+}
+
+.t-badge {
+  background-color: #436850;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-interested-talent {
+  text-align: center;
+  position: fixed;
+}
+
+.talent-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+  background-color: #fff;
+  width: 400px;
+}
+
+/* 홈탭 스크롤 없애기 */
+.talent-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.talent-button {
+  background-color: #e3f1e3; /* Light green */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px; /* 텍스트 크기에 맞게 여유롭게 패딩 설정 */
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #3b5947; /* Darker green for text */
+  cursor: pointer;
+  width: auto; /* 텍스트 크기에 맞추어 버튼 크기 자동 설정 */
+  display: inline-block; /* 버튼이 인라인 요소처럼 취급되도록 설정 */
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+}
+
+.talent-button.selected {
+  background-color: #3b5947; /* Darker green for the selected button */
+  color: white;
+}
+
+.talent-button:hover {
+  background-color: #3b5947; /* Darker green on hover */
+  color: white;
+}

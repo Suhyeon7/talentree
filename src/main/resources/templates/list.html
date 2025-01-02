@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board List</title>
+</head>
+<body>
+<h1>Board List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="board : ${boards}">
+        <td th:text="${board.title}"></td>
+        <td th:text="${board.content}"></td>
+        <td>
+            <a th:href="@{/{id}/edit(id=${board.boardId})}">Edit</a>
+            <form th:action="@{/{id}/like(id=${board.boardId})}" method="post" style="display:inline;">
+                <button type="submit">Like</button>
+            </form>
+            <form th:action="@{/{id}/dislike(id=${board.boardId})}" method="post" style="display:inline;">
+                <button type="submit">Dislike</button>
+            </form>
+            <div>
+                <p>좋아요: <span th:text="${board.likeCount}">0</span></p> <!-- 좋아요 개수 -->
+                <p>싫어요: <span th:text="${board.dislikeCount}">0</span></p> <!-- 싫어요 개수 -->
+            </div>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="/new">Create New Board</a>
+</body>
+</html>

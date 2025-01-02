@@ -1,0 +1,122 @@
+.login-tab {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+
+.login-tab input {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 13px;
+  height: 20px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.password-input {
+  position: relative;
+}
+
+
+.login-title {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .login-subtitle {
+    font-size: 28px;
+    margin: 0;
+    color: #436850;
+  }
+
+  .login-description {
+    font-size: 14px;
+  }
+  
+  .login-form {
+    width: 90%;
+    max-width: 320px;
+    padding: 2rem;
+  }
+
+  .password-input .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #436850;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #436850;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .signup-section {
+    text-align: center;
+    margin-top: 1rem;
+    color: #71727A;
+    font-size: 13px;
+  }
+  
+  .signup-link {
+    color: #436850;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .divider {
+    margin: 1rem 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+
+  .auto-login {
+    text-align: center;
+    font-size: 13px;
+    color: #71727A;
+  }
+  
+  .ds-login {
+    background-color: #910038;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }

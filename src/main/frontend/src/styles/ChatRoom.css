@@ -1,0 +1,283 @@
+.chat-Tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: white;
+    height: 60px;
+}
+
+.c-header-img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.chat-room-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-room-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.chat-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+}
+
+.chat-details h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chat-details p {
+    margin: 0;
+    color: #71727A;
+    font-size: 14px;
+}
+
+.trade-button {
+    background-color: #436850;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+    /* position: fixed; 화면 하단에 고정 */
+    /* position 나중에 대화 내역 많아지면 스크롤되는지 확인 필요 */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+
+.chat-input {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.reply-icon {
+    font-size: 1.5rem;
+    color: #436850;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* 모달 관련 스타일 */
+.modal-backdrop {
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trade {
+    font-size: 17px;
+}
+
+.modal-content p {
+    font-size: 13px;
+    color: #71727A;
+}
+
+.modal-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px;
+}
+
+.input-box {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: 1.3px solid #dcdcdc;
+    border-radius: 15px;
+    outline: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.cancel-button,
+.confirm-button {
+    width: 110px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-button {
+    border: 1.5px solid #436850;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.confirm-button {
+    border: 1.5px solid #436850;
+    background-color: #436850;
+    color: white;
+}
+
+.my-number {
+    font-size: 15px;
+    color: #436850;
+    margin: 4px;
+    background-color: #e1f1e2;
+    border-radius: 5px;
+}
+
+
+/* 채팅 공간 css */
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+.sender-message {
+    align-self: flex-start;
+    background-color: #F8F9FE;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 17px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.receiver-message {
+    align-self: flex-end;
+    background-color: #436850;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 17px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/*캘린더 알림*/
+.notification-message {
+    align-self: center;
+    background-color: #D6EFD8 !important;
+    color: #333 !important;
+    padding: 10px 15px !important;
+    border-radius: 15px !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+}
+
+
+.calendar-icon {
+    font-size: 1.5rem;
+    color: #436850;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 2024년 10월 14일부터 16일까지 날짜 배경색 변경 */
+.react-datepicker__day--custom {
+    background-color: #ffcccb; /* 원하는 배경색 */
+    color: #333; /* 텍스트 색상 */
+    pointer-events: none;
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.react-datepicker__day--custom:hover {
+    background-color: #ff9999; /* 마우스 오버 시 색상 */
+    color: white; /* 마우스 오버 시 텍스트 색상 */
+    pointer-events: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 목록</title>
+</head>
+<body>
+<select id="sortOptions" onchange="sortBoards()">
+    <option value="likeCount">좋아요순</option>
+    <option value="score">활동점수순</option>
+    <option value="point">포인트순</option>
+</select>
+
+<!-- 게시물 리스트가 표시될 부분 -->
+<div id="boardList"></div>
+
+<!-- JavaScript 코드 -->
+<script>
+    function sortBoards() {
+        const option = document.getElementById('sortOptions').value;
+        const url = '/boards/api?sort=' + option;  // API 엔드포인트
+
+        // 서버에서 게시물 데이터를 가져오기
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();  // JSON 데이터를 파싱
+            })
+            .then(boards => {
+                const boardListDiv = document.getElementById('boardList');
+                boardListDiv.innerHTML = '';  // 기존 내용을 비움
+
+                // 받아온 게시물 데이터를 HTML로 변환하여 화면에 표시
+                boards.forEach(board => {
+                    const boardElement = document.createElement('div');
+                    boardElement.innerHTML = `
+                        <h3>${board.title}</h3>
+                        <p>${board.content}</p>
+                        <p>좋아요: ${board.likeCount}</p>
+                        <p>포인트: ${board.point}</p>
+                        <p>사용자 활동 점수: ${board.user ? board.user.score : '정보 없음'}</p>`;
+                    boardListDiv.appendChild(boardElement);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+
+    // 페이지 로드 시 기본 정렬로 게시물 표시
+    window.onload = function() {
+        sortBoards();  // 페이지 로딩 시 기본 데이터를 불러옴
+    };
+</script>
+
+</body>
+</html>

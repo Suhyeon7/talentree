@@ -1,0 +1,78 @@
+/*SearchFilter.css*/
+.filter-page {
+  display: flex;
+  flex-direction: column;
+  height: 750px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 0;
+}
+
+.search-cancel-button,
+.reset-button {
+  color: #436850;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+  padding: 0;
+}
+
+.filter-page h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-body {
+  flex: 1;
+}
+
+.point-range {
+  margin-top: 20px;
+}
+
+.point-range label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.point-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.point-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  height: 20px;
+}
+
+.apply-button {
+  background-color: #436850;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-message {
+  color: rgb(152, 0, 0);
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 0px;
+}

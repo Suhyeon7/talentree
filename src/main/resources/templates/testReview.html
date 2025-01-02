@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <title>Test Review</title>
+</head>
+<body>
+<h1>리뷰 항목 선택</h1>
+<form action="/submitReview" method="post">
+  <label>
+    <input type="checkbox" name="selectedOptions" value="배우는 시간이 보람찼어요"> 배우는 시간이 보람찼어요
+  </label><br>
+  <label>
+    <input type="checkbox" name="selectedOptions" value="매너가 좋아요"> 매너가 좋아요
+  </label><br>
+  <label>
+    <input type="checkbox" name="selectedOptions" value="답변이 빨라요"> 답변이 빨라요
+  </label><br>
+  <label>
+    <input type="checkbox" name="selectedOptions" value="시간 약속을 잘 지켜요"> 시간 약속을 잘 지켜요
+  </label><br>
+  <label>
+    <input type="checkbox" name="selectedOptions" value="열정적이에요"> 열정적이에요
+  </label><br>
+  <button type="submit">제출</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/*HomeTab.css*/
+.home-tab {
+  padding-bottom: 60px; /* Footer 공간 확보 */
+  background-color: #fff;
+}
+
+.home-header {
+  width: 353px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1000;
+  padding: 0 1.5rem;
+}
+
+.menu-icon,
+.search-icon {
+  font-size: 1.5rem;
+  color: #436850;
+  margin: 0;
+  cursor: pointer;
+}
+
+.head-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #436850;
+  cursor: pointer;
+}
+
+.image-slider img {
+  width : 400px;
+  height: 200px;
+  padding-top : 3.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.slider-placeholder {
+  background-color: #d1e7dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.more-link {
+  color: #436850;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.talent-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 1rem;
+
+  /* 홈탭 스크롤 없애기 */
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+/* 홈탭 스크롤 없애기 */
+.talent-list::-webkit-scrollbar {
+  display: none;
+}
+
+.talent-item {
+  background-color: #f0f4f3;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0; /* 가로 스크롤 시 크기 유지 */
+  cursor: pointer;
+}
+
+.image-placeholder {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 150px;
+  background-color: #c8e6c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.talent-info {
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.talent-item p {
+  font-size: 0.9rem;
+  margin: 5px;
+  text-align: left;
+}
+
+.talent-item span {
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: block;
+  text-align: left; /* 좌측 정렬 */
+  margin: 5px;
+}
+
+.comment {
+  font-size: 20px;
+  margin: 0;
+}
+
+.interested-talent,
+.recommended-talent {
+  margin-bottom: 1rem; /* 두 섹션 간의 간격 추가 */
+}
+
+/* 홈탭 플러스 버튼 스타일링 */
+.create-post-button {
+  position: fixed;
+  bottom: 100px; /* 탭바 위, 프로필 탭과 겹치지 않도록 조정 */
+  margin-left: 300px;
+  width: 60px;
+  height: 60px;
+  background-color: #436850;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1500; /* 탭바 위에 오도록 z-index 설정 */
+}
+
+.create-post-button:hover {
+  background-color: #45a049;
+}
+
+.create-post-button svg {
+  color: white;
+}
+
+.main-logo {
+  height: 25px;
+  cursor: pointer;
+}
+
+.current-talent,
+.recommended-talent {
+  margin-bottom: 1rem; /* 두 섹션 간의 간격 추가 */
+}
+
+.current-talent{
+  margin-top : 2.5rem;
+}
